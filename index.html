@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker | Landing Page UI Desing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="assets/logo.png" alt=""></a>
+        <div class="toggle"><img src="assets/toggle.png" alt=""></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quam a placeat. Distinctio beatae cum sapiente iure laboriosam, quae dolore vero perspiciatis blanditiis asperiores accusamus provident necessitatibus voluptate dignissimos vel debitis consequuntur excepturi tenetur voluptas molestias cumque. Temporibus, sint soluta!</p>
+            <a href="#" class="play" onclick="toggle()"><img src="assets/play.png"  alt="">Watch trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="$"><img src="assets/facebook.png" alt=""></a></li>
+                <li><a href="$"><img src="assets/twitter.png" alt=""></a></li>
+                <li><a href="$"><img src="assets/instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="assets/video.mp4" controls="true"></video>
+        <img src="assets/close.png" class="close" onclick="toggle()" alt="">
+    </div>
+    <script type="text/javascript">
+    function toggle(){
+        var video = document.querySelector('video');
+        var trailer = document.querySelector('.trailer');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+        
+    }
+    </script>
+</body>
+</html>
